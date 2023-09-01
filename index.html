@@ -1,13 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <!-- tailwind cdn link  -->
-     <script src="https://cdn.tailwindcss.com"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- tailwind cdn link  -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>PH Tube - Online Video Streaming</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <header class="container mx-auto">
+      <nav class="flex justify-between items-center md:flex-row my-12">
+        <img src="images/Logo.png" />
+        <button class="bg-gray-200 text-xl px-5 py-2 rounded-lg font-medium">
+          Sort By Date
+        </button>
+        <button
+          class="bg-[#FF1F3D] text-xl px-5 py-2 rounded-lg font-medium text-white"
+        >
+          Blog
+        </button>
+      </nav>
+      <hr class="w-full" />
+    </header>
+    <main class="container mx-auto">
+      <!-- category buttons section -->
+      <section class="my-12">
+        <!-- category button container -->
+        <div id="category-container" class="text-center space-x-6"></div>
+      </section>
+
+      <!-- video cards section-->
+      <section
+        id="video-container"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+      >
+      </section>
+    </main>
+
+    <script src="js/index.js"></script>
+  </body>
 </html>
