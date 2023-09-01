@@ -5,11 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- tailwind cdn link  -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- style for active button -->
+    <style>
+      .active{
+        background-color: #FF1F3D;
+        color: white;
+      }
+      .not-active{
+        background-color: #E5E7EB;
+        color: black;
+      }
+    </style>
     <title>PH Tube - Online Video Streaming</title>
   </head>
   <body>
     <header class="container mx-auto">
-      <nav class="flex justify-between items-center md:flex-row my-12">
+      <nav class="flex justify-between md:flex-row flex-col items-center my-12 gap-5 md:gap-0 md:px-[15%] lg:px-0">
         <img src="images/Logo.png" />
         <button id="sort-by-view-btn" class="bg-gray-200 text-xl px-5 py-2 rounded-lg font-medium">
           Sort By Views
@@ -22,13 +33,13 @@
       <!-- category buttons section -->
       <section class="my-12">
         <!-- category button container -->
-        <div id="category-container" class="text-center space-x-6"></div>
+        <div id="category-container" class="text-center space-x-6 flex flex-wrap gap-5 justify-center items-center"></div>
       </section>
 
       <!-- video cards section-->
       <section
         id="video-container"
-        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12"
       >
       </section>
     </main>
