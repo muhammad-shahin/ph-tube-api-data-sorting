@@ -26,8 +26,7 @@ const showCategoryButtons = (categories) => {
 // sort by views
 const sortByViewBtn = document.getElementById('sort-by-view-btn');
 sortByViewBtn.addEventListener('click', function(){
-  console.log(currentCategoryId);
-  loadVideos(`${currentCategoryId}`, true);
+  loadVideos(currentCategoryId, true);
 })
 const loadVideos = async (categoryId, isSorted = false) => {
   const res = await fetch(
