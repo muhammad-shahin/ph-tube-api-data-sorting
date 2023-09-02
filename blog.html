@@ -12,39 +12,147 @@
       type="text/css"
     />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- code snippet maker links -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-dark.min.css"
+    />
     <title>JavaScript Questions & Answers</title>
   </head>
-  <body class="flex justify-center items-center h-[100vh]">
-      <!-- Q&A Section  -->
-      <section class="space-y-5 container mx-auto lg:w-full w-[90%]">
-        <h1 class="text-5xl font-bold text-center">Answer of the JavaScript Questions</h1>
-        <div class="collapse collapse-arrow bg-base-200">
-            <input type="radio" name="my-accordion-2" checked="checked" /> 
-            <div class="collapse-title text-xl font-medium">
-                Discuss the scope of var, let, and const
-            </div>
-            <div class="collapse-content"> 
-              <p>hello</p>
-            </div>
-          </div>
-          <div class="collapse collapse-arrow bg-base-200">
-            <input type="radio" name="my-accordion-2" /> 
-            <div class="collapse-title text-xl font-medium">
-                Tell us the use cases of null and undefined
-            </div>
-            <div class="collapse-content"> 
-              <p>hello</p>
-            </div>
-          </div>
-          <div class="collapse collapse-arrow bg-base-200">
-            <input type="radio" name="my-accordion-2" /> 
-            <div class="collapse-title text-xl font-medium">
-                What do you mean by REST API?
-            </div>
-            <div class="collapse-content"> 
-              <p>hello</p>
-            </div>
-          </div>
+  <body class="flex justify-center items-center h-auto">
+    <!-- Q&A Section  -->
+    <section class="space-y-5 container mx-auto lg:w-full w-[90%]">
+      <h1 class="text-5xl font-bold text-center">
+        Answer of the JavaScript Questions
+      </h1>
+      <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2"  />
+        <div class="collapse-title text-xl font-medium">
+          Discuss the scope of var, let, and const
+        </div>
+        <div class="collapse-content text-xl">
+          <p>
+            In JavaScript, we can declare variables in 3 ways using var, let, and
+            const. Now, lets take a look each one of them and their scope.
+          </p>
+          <p>
+            <span class="text-4xl text-blue-500">'var': </span> Variable declared with bar can only accessible within the
+            function they are defined in. This is means var is function scoped.
+            var declared variables can be reassigned and re-declared. Let me
+            give an example to understand this better. <br />
+            Example:
+          </p>
+          <pre class="w-[50%]">
+                  <code class="rounded-lg">
+    function fun1(){
+      if(10 &gt; 5){
+          console.log(10);
+          var a = 6;
+      }
+      console.log(a); //output will be 6 
+      because a is function scoped
+  }
+  fun1();
+                  </code>
+                </pre>
+                <p>In this example we decalred a variable using var inside a function if-else condition now we can access 'a' from anywhere inside that function. We can also access 'a' from outside the function because var variables are hoisted to the global scope.</p>
+                <p>Now, what is hoisting? <br>
+
+                  In simple words hoisiting means you can define a variable before its declaration. Lets take another example to understand hoisting better.
+                  Hoisting Example:</p>
+                  <pre class="w-[50%]">
+                    <code class="rounded-lg">
+    // Hoisting Example 1
+    console.log(number);
+    
+    var number = 23;
+    
+    // Hoisting Example 2
+    number2 = 36;
+    
+    console.log(number2);
+    
+    var number2;
+                    </code>
+                  </pre>
+                  <p>In Example 1, we cosole log a varible named as number but we didn't declare or initilized the number vcarible before console log it. In this case output will be undefined because we didn't initilized any value for number variable before console.log(number)
+                    <br>
+                    In Example 2, we first initialized a variable number2 and put 36 as value then we console log the number2 after that we decalre the variable. In this case output will be 36 because hoisitng put every var variable declaration at the top of the scop that's why it's printiing 36 even when we are decalring the variable number2 after console.log</p>
+                    <p>
+                      <span class="text-4xl text-blue-500">'let':</span> Variables declared with let is block scoped and hoisitng doesn't work for let declared variables. <br>
+                      Block Scoped: Variable declared with let are only accessible inside the block they are defined in. In other way we can say that let declared varibles can only accessible within the curly braces they are defined. Let's take a simple example for better understanding.</p>
+                      <pre class="w-[50%]">
+                        <code class="rounded-lg">
+    Example 1:
+    function printSomething() {
+      if (56 > 20) {
+        //we can access number variable inside this scop only
+        let number = 23;
+        console.log(number);
+      }
+      //   if we try to access number variable here it will give an error of not defined
+      console.log(number);
+    }
+    printSomething();
+                        </code>
+                      </pre>
+                      <p>let declared variabled doesn't support hoisting. This means we can't define a variable before declaration. Let's take another example. <br>
+                        Example 2:</p>
+                        <pre class="w-[50%]">
+                          <code class="rounded-lg">
+  /* we are trying to console log
+  the variable before it's declaration
+  it will give an ReferenceError:
+  (Cannot access 'username' before initialization) */
+  console.log(username);
+  let username = "Shahin";
+                          </code>
+                        </pre>
+                        <p><span class="text-4xl text-blue-500">'const':</span> Variables declared as const are in the block scope. As like let, variables declared with const are block-scoped, meaning they are limited to the nearest enclosing block. Also vaiables declared with const can't be reassigned and re-declared. Let's take some examples. <br>
+                          Example 1:</p>
+                          <pre class="w-[50%]">
+                            <code class="rounded-lg">
+  const nam = 'amar nam mofiz';
+  // it will throw an TypeError
+  //that means we can not reassign nam variable 
+  nam = 'ami kintu mofiz na';
+                            </code>
+                          </pre>
+                          <p>As like let declared variables const variables also do not support hoisting. This means we can not define a const variable before it's declaration. <br>
+                            Example 2:</p>
+                            <pre class="w-[50%]">
+                              <code class="rounded-lg">
+  // it will throw an ReferenceError:
+  //Cannot access 'nameKi' before initialization
+  console.log(nameKi);
+  const nameKi = 'nam dia kam ki?';
+                              </code>
+                            </pre>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">
+          Tell us the use cases of null and undefined
+        </div>
+        <div class="collapse-content">
+          <p>hello</p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">
+          What do you mean by REST API?
+        </div>
+        <div class="collapse-content">
+          <p>hello</p>
+        </div>
+      </div>
     </section>
+    <!-- color code snippet links -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
   </body>
 </html>
