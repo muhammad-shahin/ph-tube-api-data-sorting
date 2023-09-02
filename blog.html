@@ -31,7 +31,7 @@
         <div class="collapse-title text-3xl font-medium">
           Discuss the scope of <span class="text-red-600 text-3xl">'var', 'let',</span> and <span class="text-red-600 text-3xl">'const'</span>
         </div>
-        <div class="collapse-content text-xl">
+        <div class="collapse-content text-xl space-y-5">
           <p>
             In JavaScript, we can declare variables in 3 ways using var, let, and
             const. Now, lets take a look each one of them and their scope.
@@ -136,7 +136,7 @@
         <div class="collapse-title text-3xl font-medium">
           Tell us the use cases of <span class="text-red-600 text-3xl">'null'</span>
         and <span class="text-red-600 text-3xl">'undefined'</span></div>
-        <div class="collapse-content text-xl">
+        <div class="collapse-content text-xl space-y-5">
           <p>In JavaScript, null and undefined are two separate values that have different applications:</p>
           <p><span class="text-2xl text-blue-600">Null: </span>null is a value that can be explicitly assigned to a variable this means it is the intentional absence of the value. It is one of the primitive value of the javascript. When we define a variable to null that means we are saying this variable is empty. Null is used most of the time when we intentionally want to set a value to empty or we want to check a condition using null. Let's take an example to understand the use case of null.</p>
           <p><span class="text-2xl text-rose-600">Example 1:</span></p>
@@ -205,11 +205,36 @@
       </div>
       <div class="collapse collapse-arrow bg-base-200">
         <input type="radio" name="my-accordion-2" />
-        <div class="collapse-title text-xl font-medium">
-          What do you mean by REST API?
+        <div class="collapse-title text-3xl font-medium">
+          What do you mean by <span class="text-red-600 text-3xl">REST API?</span> 
         </div>
-        <div class="collapse-content">
-          <p>hello</p>
+        <div class="collapse-content text-xl space-y-5">
+          <p><span class="text-2xl text-blue-600">REST API: </span>REST API stands for Represntarional State Transfer Application Programming Interface. REST is an architectural style that defines a set of constraints to be used for creating web services. REST is not a Programming Laguage neither a Library. It's a set of guidelines and principles for creating web services.</p>
+          <p><span class="text-2xl text-blue-600">How REST API Works?</span><br>REST API uses stateless communication, treats everything as a resource, and uses GET, POST, PUT, and DELETE HTTP methods. Each resources has an unique URL, and data can be displayed in various way, including JSON.</p>
+          <p><span class="text-2xl text-blue-600">There are 4 HTTP Request method for REST API:</span></p>
+          <ol class="text-rose-500">
+            <li><span class="text-blue-600">GET:</span> This method send request to server to get all data as response. It also can be used for getting specific data by using endpoints.</li>
+            <li><span class="text-blue-600">POST:</span> This method request server to create a new data.</li>
+            <li><span class="text-blue-600">PUT/PATCH:</span> This method request server to update an existing data.</li>
+            <li><span class="text-blue-600">PUT/DELETE:</span> This method request server to delete data you requested for.</li>
+          </ul>
+          <p>Here is an example below of how REST API data looks in json format:</p>
+          <pre class="w-[50%]">
+            <code class="rounded-lg">
+[
+{
+  &quot;id&quot;: 1,
+  &quot;title&quot;: &quot;Ki Khobor Mia Vi&quot;,
+  &quot;author&quot;: &quot;Mofiz Mia&quot;
+},
+{
+  &quot;id&quot;: 2,
+  &quot;title&quot;: &quot;Aj Achi Kal Nai&quot;,
+  &quot;author&quot;: &quot;Motin Vi&quot;
+}
+]
+            </code>
+          </pre>
         </div>
       </div>
     </section>
