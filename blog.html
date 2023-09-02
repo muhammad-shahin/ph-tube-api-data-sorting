@@ -27,8 +27,9 @@
       </h1>
       <div class="collapse collapse-arrow bg-base-200">
         <input type="radio" name="my-accordion-2"  />
-        <div class="collapse-title text-xl font-medium">
-          Discuss the scope of var, let, and const
+        <!-- question 1 -->
+        <div class="collapse-title text-3xl font-medium">
+          Discuss the scope of <span class="text-red-600 text-3xl">'var', 'let',</span> and <span class="text-red-600 text-3xl">'const'</span>
         </div>
         <div class="collapse-content text-xl">
           <p>
@@ -55,10 +56,10 @@
   fun1();
                   </code>
                 </pre>
-                <p>In this example we decalred a variable using var inside a function if-else condition now we can access 'a' from anywhere inside that function. We can also access 'a' from outside the function because var variables are hoisted to the global scope.</p>
+                <p>In this example we declared a variable using var inside a function if-else condition now we can access 'a' from anywhere inside that function. We can also access 'a' from outside the function because var variables are hoisted to the global scope.</p>
                 <p>Now, what is hoisting? <br>
 
-                  In simple words hoisiting means you can define a variable before its declaration. Lets take another example to understand hoisting better.
+                  In simple words hoisting means you can define a variable before its declaration. Lets take another example to understand hoisting better.
                   Hoisting Example:</p>
                   <pre class="w-[50%]">
                     <code class="rounded-lg">
@@ -75,12 +76,12 @@
     var number2;
                     </code>
                   </pre>
-                  <p>In Example 1, we cosole log a varible named as number but we didn't declare or initilized the number vcarible before console log it. In this case output will be undefined because we didn't initilized any value for number variable before console.log(number)
+                  <p>In Example 1, we console log a variable named as number but we didn't declare or initialized the number variable before console log it. In this case output will be undefined because we didn't initialized any value for number variable before console.log(number)
                     <br>
-                    In Example 2, we first initialized a variable number2 and put 36 as value then we console log the number2 after that we decalre the variable. In this case output will be 36 because hoisitng put every var variable declaration at the top of the scop that's why it's printiing 36 even when we are decalring the variable number2 after console.log</p>
+                    In Example 2, we first initialized a variable number2 and put 36 as value then we console log the number2 after that we declare the variable. In this case output will be 36 because hoisting put every var variable declaration at the top of the scop that's why it's printing 36 even when we are declaring the variable number2 after console.log</p>
                     <p>
-                      <span class="text-4xl text-blue-500">'let':</span> Variables declared with let is block scoped and hoisitng doesn't work for let declared variables. <br>
-                      Block Scoped: Variable declared with let are only accessible inside the block they are defined in. In other way we can say that let declared varibles can only accessible within the curly braces they are defined. Let's take a simple example for better understanding.</p>
+                      <span class="text-4xl text-blue-500">'let':</span> Variables declared with let is block scoped and hoisting doesn't work for let declared variables. <br>
+                      Block Scoped: Variable declared with let are only accessible inside the block they are defined in. In other way we can say that let declared variables can only accessible within the curly braces they are defined. Let's take a simple example for better understanding.</p>
                       <pre class="w-[50%]">
                         <code class="rounded-lg">
     Example 1:
@@ -96,7 +97,7 @@
     printSomething();
                         </code>
                       </pre>
-                      <p>let declared variabled doesn't support hoisting. This means we can't define a variable before declaration. Let's take another example. <br>
+                      <p>let declared variables doesn't support hoisting. This means we can't define a variable before declaration. Let's take another example. <br>
                         Example 2:</p>
                         <pre class="w-[50%]">
                           <code class="rounded-lg">
@@ -108,7 +109,7 @@
   let username = "Shahin";
                           </code>
                         </pre>
-                        <p><span class="text-4xl text-blue-500">'const':</span> Variables declared as const are in the block scope. As like let, variables declared with const are block-scoped, meaning they are limited to the nearest enclosing block. Also vaiables declared with const can't be reassigned and re-declared. Let's take some examples. <br>
+                        <p><span class="text-4xl text-blue-500">'const':</span> Variables declared as const are in the block scope. As like let, variables declared with const are block-scoped, meaning they are limited to the nearest enclosing block. Also variables declared with const can't be reassigned and re-declared. Let's take some examples. <br>
                           Example 1:</p>
                           <pre class="w-[50%]">
                             <code class="rounded-lg">
@@ -132,11 +133,74 @@
       </div>
       <div class="collapse collapse-arrow bg-base-200">
         <input type="radio" name="my-accordion-2" />
-        <div class="collapse-title text-xl font-medium">
-          Tell us the use cases of null and undefined
-        </div>
-        <div class="collapse-content">
-          <p>hello</p>
+        <div class="collapse-title text-3xl font-medium">
+          Tell us the use cases of <span class="text-red-600 text-3xl">'null'</span>
+        and <span class="text-red-600 text-3xl">'undefined'</span></div>
+        <div class="collapse-content text-xl">
+          <p>In JavaScript, null and undefined are two separate values that have different applications:</p>
+          <p><span class="text-2xl text-blue-600">Null: </span>null is a value that can be explicitly assigned to a variable this means it is the intentional absence of the value. It is one of the primitive value of the javascript. When we define a variable to null that means we are saying this variable is empty. Null is used most of the time when we intentionally want to set a value to empty or we want to check a condition using null. Let's take an example to understand the use case of null.</p>
+          <p><span class="text-2xl text-rose-600">Example 1:</span></p>
+          <pre class="w-[50%]">
+            <code class="rounded-lg">
+      /* here we are checking vairable
+      'mokkel'  is null or not
+      */
+      let mokkel = 'akkel';
+      if(mokkel === null){
+          console.log('Mokkel er akkel nai');
+      }
+      else{
+          console.log('Mokkel er akkel ache');
+      }
+            </code>
+          </pre>
+          <p><span class="text-2xl text-blue-600">Undefined: </span>A variable in JavaScript that has been declared but not assigned a value automaticly takes the value "undefined." <br>
+            If we decalre a varibale but do not assign any value the default value will be 'undefined' also if we write a function that takes a parameter if we call the function and do not pass any value in argument then the default value will be 'undefined'. Let's look at the example below: <br></p>
+          <p><span class="text-2xl text-rose-600">Example 1:</span></p>
+          <pre class="w-[50%]">
+            <code class="rounded-lg">
+    let abc;
+    console.log(abc); //output will be undefined 
+    /*abc will be undefined because we didn't
+    assign any value for abc
+    */
+    function printMyName(name){
+        console.log(`My name is ${name}`); 
+    }
+    printMyName(); 
+    /*name will be undefined because we didn't
+    pass any name in argument
+    */
+            </code>
+          </pre>
+          <p>It's important to note both 'null' and 'undefined' looks like they are doing the same thing but there are some major differences. <br>
+            Null is used to describe a intentional absence of value or to clear a value, whereas undefined is often used to represent an unintentional or accidental absence of value or a missing value.
+            Now Let's compare null and undefined using double qual & triple equal operator for better understanding. <br> <span class="text-2xl text-rose-600">Example 2:</span></p>
+          <pre class="w-[50%]">
+            <code class="rounded-lg">
+    /* comparing null and undefined
+    using double equal operator
+    */
+    if(null == undefined){
+        console.log('true');
+        //output will be true
+    }
+    else{
+        console.log('false');
+    }
+    /* comparing null and undefined
+    using triple equal operator
+    */
+    if(null === undefined){
+        console.log('true');
+    }else{
+        console.log('false');
+        //output will be false
+    }
+            </code>
+          </pre>
+          <p>When we are comparing with double equals it's giving us out true but when we are comparing with triple equal operator output is false because null is equal to undefined but not identical.</p>
+          
         </div>
       </div>
       <div class="collapse collapse-arrow bg-base-200">
