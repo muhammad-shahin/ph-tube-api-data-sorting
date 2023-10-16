@@ -84,7 +84,7 @@ const showVideos = (videos) => {
             <p class="posted-time absolute bottom-3 p-1 right-4 bg-black text-white text-[14px] rounded">${postedDate}</p>
           </div>
           <div class="flex justify-start items-center gap-3">
-          <div class=""><img class="w-10 h-10 rounded-full" src="${authorProfilePic}"/></div>
+          <div class=""><img class="w-10 h-10 rounded-full object-cover" src="${authorProfilePic}"/></div>
             <h4 class="font-bold">
             ${title}
             </h4>
