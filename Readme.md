@@ -1,12 +1,12 @@
 # 📺 PH Tube - API Data Sorting Project 📊
 
-Explore **PH Tube**, a project where you get hands-on experience with APIs and data sorting. This web app showcases your skills in using APIs to fetch and display video information, all wrapped in a user-friendly interface. 🌐
+Explore **PH Tube**, a project where I get hands-on experience with APIs and data sorting. This web app showcases my skills in using APIs to fetch and display video information, all wrapped in a user-friendly interface. 🌐
 
 ![PH Tube Screenshot](https://i.ibb.co/87DLnY0/assignment-6-project-showcase.png)
 
 ## About the Project
 
-**PH Tube** is an educational project that takes you on a journey into the world of APIs. It demonstrates how you can dynamically present video-related data, including video titles, thumbnails, view counts, channel names, and upload times, to users.
+**PH Tube** is an educational project that takes me on a journey into the world of APIs. It demonstrates how you can dynamically present video-related data, including video titles, thumbnails, view counts, channel names, and upload times, to users.
 
 ### Key Features
 
